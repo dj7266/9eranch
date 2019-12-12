@@ -1,0 +1,19 @@
+.nav-bar{
+  background-color: rgb(122, 107, 167);
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-content{
+  color: white;
+  padding: 15px;
+  font-size: 18px;
+}
+
+.bookNow{
+  position: absolute;
+  right: 20px;
+}

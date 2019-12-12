@@ -1,0 +1,14 @@
+<div class="container">
+  <div *ngFor='let cabin of cabins' class="row cabin">
+    <img class="col-md-6 cabin-img" [src]="cabin.img" alt="cabin1" />
+    <div class="col-md-6 cabin-description">
+      <h2>{{cabin.title}}</h2>
+      <h6>{{cabin.description}}</h6>
+        <div *ngFor='let amenity of cabin.amenities' class='amenity'>
+          <fa-icon [icon]="faCheckSquare"></fa-icon>
+          <p>{{amenity}}</p>
+        </div>
+    </div>
+  </div>
+  <button mat-raised-button (click)="openDialog()">Pick one</button>
+</div>

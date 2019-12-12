@@ -1,0 +1,34 @@
+.carousel-item{
+  img{
+    width: 100%;
+    height: 90vh;
+  }
+}
+
+.datepickerContainer{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-top: 40px;
+  z-index:10;
+}
+
+.datepicker{
+  display: flex;
+  justify-content: center;
+  background: rgba(255,255,255,0.6);
+  padding: 10px;
+}
+
+.date {
+  padding: 0 20px;
+  padding-top: 10px;
+}
+
+.datepickerSearch{
+  background: rgb(122, 107, 167);
+  border: rgb(122, 107, 167);
+  color: white;
+}
