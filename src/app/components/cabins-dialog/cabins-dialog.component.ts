@@ -2,8 +2,10 @@ import { Component, OnInit, Inject } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
 export interface DialogData {
-  animal: string;
-  name: string;
+  img: string;
+  title: string;
+  description: string;
+  amenities: string;
 }
 
 
@@ -20,6 +22,7 @@ export class CabinsDialogComponent implements OnInit {
 
   ngOnInit() {
   }
+
   onNoClick(): void {
     this.dialogRef.close();
   }

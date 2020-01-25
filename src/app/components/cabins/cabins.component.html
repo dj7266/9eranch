@@ -1,14 +1,27 @@
-<div class="container">
-  <div *ngFor='let cabin of cabins' class="row cabin">
-    <img class="col-md-6 cabin-img" [src]="cabin.img" alt="cabin1" />
-    <div class="col-md-6 cabin-description">
-      <h2>{{cabin.title}}</h2>
-      <h6>{{cabin.description}}</h6>
-        <div *ngFor='let amenity of cabin.amenities' class='amenity'>
-          <fa-icon [icon]="faCheckSquare"></fa-icon>
-          <p>{{amenity}}</p>
-        </div>
-    </div>
-  </div>
-  <button mat-raised-button (click)="openDialog()">Pick one</button>
+<div class="cabinsPage">
+<div class="row">
+  <h1 class="col-md-12 centerAll cabinHeader">Explore Our Cabins Today</h1>
 </div>
+<img class='cabinIllust' src="./assets/others/illust1.png" alt="">
+<div class="row cabins">
+  <div *ngFor="let cabin of cabins" class="col-md-3 cabinContainer" (click)="openDialog(cabin)">
+    <div
+      class="cabin centerAll"
+      [style.background-image]="'url(' + cabin.img[0] + ')'"
+    >
+      <!-- <img class="cabin-img" [src]="cabin.img" alt="cabin1" /> -->
+      <!-- <div class="cabin-description">
+        <h4>{{ cabin.title }}</h4>
+        <p>{{ cabin.description }}</p>
+        <div *ngFor="let amenity of cabin.amenities" class="amenity">
+          <fa-icon [icon]="faCheckSquare"></fa-icon>
+          <p>{{ amenity }}</p>
+        </div>
+      </div> -->
+    </div>
+    <h5 class="cabinTitle centerAll">{{ cabin.title }}</h5>
+
+  </div>
+</div>
+</div>
+<!-- <button mat-raised-button (click)="openDialog()">Pick one</button> -->

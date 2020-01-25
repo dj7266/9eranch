@@ -1,5 +1,15 @@
+@import "../../app.component.scss";
+
+.mainLogo{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 50px;
+
+}
+
 .nav-bar{
-  background-color: rgb(122, 107, 167);
+  background-color: $main-color;
   width: 100%;
   height: 10vh;
   display: flex;
@@ -8,12 +18,40 @@
 }
 
 .nav-content{
-  color: white;
+  color: white !important;
   padding: 15px;
   font-size: 18px;
+  cursor: pointer;
+}
+
+.moreDropDown{
+  display: inline-flex;
+  padding-right: 5px;
 }
 
 .bookNow{
   position: absolute;
   right: 20px;
+}
+
+.moreIcon{
+  color: white;
+}
+
+.mobileMenu{
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .nav-bar{
+    justify-content: flex-end;
+  }
+  .webMenu{
+    display: none;
+  }
+  .mobileMenu{
+    display: block;
+    position: relative;
+    padding-right: 20px;
+  }
 }

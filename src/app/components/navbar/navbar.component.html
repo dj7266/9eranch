@@ -1,10 +1,33 @@
 <div>
-  <div class='nav-bar'>
-    <a class='nav-content' routerLink=''>Home</a>
-    <a class='nav-content' routerLink='/about'>About Us</a>
-    <a class='nav-content' routerLink='/cabins'>Cabins</a>
-    <a class='nav-content' routerLink='/location'>Location</a>
-    <a class='nav-content' routerLink='/reservation'>Reservation</a>
-    <!-- <a class='btn btn-success bookNow' href="https://via.eviivo.com/ERnchCbnsLstPnsBstrp78957">Book Now!</a> -->
+  <div class="nav-bar">
+    <img class="mainLogo" src="./assets/others/logo.png" alt="">
+    <div class="webMenu">
+      <a class="nav-content" routerLink="">Home</a>
+      <a class="nav-content" routerLink="/about">About Us</a>
+      <a class="nav-content" routerLink="/cabins">Cabins</a>
+      <a class="nav-content" routerLink="/thingsToDo">Things to do</a>
+      <a
+        class="nav-content"
+        href="https://via.eviivo.com/ERnchCbnsLstPnsBstrp78957"
+        >Book Now</a
+      >
+    </div>
+
+    <div class="mobileMenu">
+      <button
+        mat-icon-button
+        [matMenuTriggerFor]="menuMobile"
+        aria-label="Example icon-button with a menu"
+      >
+        <mat-icon class="moreIcon">menu</mat-icon>
+      </button>
+      <mat-menu #menuMobile="matMenu" xPosition="before" yPosition="below">
+        <a mat-menu-item routerLink="">Home</a>
+        <a mat-menu-item routerLink="/about">About Us</a>
+        <a mat-menu-item routerLink="/cabins">Cabins</a>
+        <a mat-menu-item routerLink="/thingsToDo">Things to do</a>
+        <a mat-menu-item href="https://via.eviivo.com/ERnchCbnsLstPnsBstrp78957">Book Now</a>
+      </mat-menu>
+    </div>
   </div>
 </div>

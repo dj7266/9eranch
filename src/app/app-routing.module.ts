@@ -7,6 +7,7 @@ import { CabinsComponent } from './components/cabins/cabins.component';
 import { LocationComponent } from './components/location/location.component';
 import { ReservationComponent } from './components/reservation/reservation.component';
 import { ErrorComponent } from './components/error/error.component';
+import { ThingsToDoComponent } from './components/things-to-do/things-to-do.component';
 
 
 
@@ -14,7 +15,7 @@ const routes: Routes = [
   { path: '', component: BannerComponent },
   { path: 'about', component: AboutComponent },
   { path: 'cabins', component: CabinsComponent },
-  { path: 'location', component: LocationComponent },
+  { path: 'thingsToDo', component: ThingsToDoComponent },
   { path: 'reservation', component: ReservationComponent },
   { path: '**', component: ErrorComponent },
 

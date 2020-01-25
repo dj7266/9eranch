@@ -1,4 +1,4 @@
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+<div id="bannerCarousel" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="datepickerContainer">
       <div class="datepicker row">
@@ -9,7 +9,7 @@
             placeholder="Check In"
             [(formControl)]="checkInDate"
             (dateChange)="setCheckOutMin()"
-            [max]="checkInMax"
+            [min]="checkInMin"
           />
           <mat-datepicker-toggle
             matSuffix
@@ -34,7 +34,7 @@
           <mat-datepicker #picker2></mat-datepicker>
         </mat-form-field>
         <div class="container centerAll">
-          <button class="datepickerSearch col-sm-2" (click)="reserveWithDate()">Search</button>
+          <button class="datepickerSearch col-sm-4" (click)="reserveWithDate()">Find a Cabin</button>
         </div>
       </div>
     </div>
@@ -50,7 +50,7 @@
   </div>
   <a
     class="carousel-control-prev"
-    href="#carouselExampleControls"
+    href="#bannerCarousel"
     role="button"
     data-slide="prev"
   >
@@ -59,7 +59,7 @@
   </a>
   <a
     class="carousel-control-next"
-    href="#carouselExampleControls"
+    href="#bannerCarousel"
     role="button"
     data-slide="next"
   >

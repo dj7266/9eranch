@@ -1,8 +1,12 @@
 @import '../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css';
 
+
 /* You can add global styles to this file, and also import other style files */
 body{
   margin: 0;
+  background-color: rgb(226,200,200) !important;
+  font-family: 'Comic Sans MS' !important;
+  font-size: 1.3em !important;
 }
 
 
@@ -13,4 +17,19 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.centerAllCol{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.mat-dialog-container{
+  background-color:rgb(253, 250, 255);
+}
+
+.mat-dialog-content{
+  max-height: 80vh !important;
 }

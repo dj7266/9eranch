@@ -4,7 +4,8 @@ import { NgbModule, NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-
+import {MatMenuModule} from '@angular/material/menu';
+import {MatIconModule, MatButtonModule} from '@angular/material';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -21,6 +22,10 @@ import { CabinsDialogComponent } from './components/cabins-dialog/cabins-dialog.
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatNativeDateModule, MatInputModule } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ThingsToDoComponent } from './components/things-to-do/things-to-do.component';
+import { BirdingComponent } from './components/birding/birding.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AgmCoreModule } from '@agm/core';
 
 
 
@@ -36,9 +41,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ReservationComponent,
     ErrorComponent,
     CabinsDialogComponent,
+    ThingsToDoComponent,
+    BirdingComponent,
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     NgbModule,
     NgbCarouselModule,
@@ -50,7 +58,17 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatNativeDateModule,
     MatInputModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatMenuModule,
+    MatIconModule,
+    MatButtonModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAhBtxlvIxjABKVrxXk_itxZrIqbptQcUI'
+      /* apiKey is required, unless you are a
+      premium customer, in which case you can
+      use clientId
+      */
+    })
   ],
   exports: [
     CabinsDialogComponent

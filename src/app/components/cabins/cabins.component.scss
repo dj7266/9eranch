@@ -1,12 +1,68 @@
-.cabin{
-  display: flex;
-  align-items: center;
-  padding: 30px 0;
+@import '../../app.component.scss';
+
+.cabinsPage {
+  padding-bottom: 30px;
 }
+
+.cabinHeader{
+  padding: 60px;
+  padding-bottom: 0px;
+  color: $main-color;
+  font-weight: 600;
+}
+
+.cabins{
+  display: flex;
+  justify-content: center;
+  padding: 10px 30px;
+
+}
+.cabin{
+  height: 300px;
+  overflow: hidden;
+  background: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.cabin:hover{
+  cursor: pointer;
+  // transform: scale(1.1);
+
+
+}
+
+.cabinTitle{
+  // color: black;
+  // font-size: 24px;
+  // font-weight: 400;
+  color: $main-color;
+  text-align: center;
+  height: 80px;
+}
+
+.cabinContainer{
+  transition: transform 0.5s;
+  &:hover{
+    transform: scale(1.1);
+    z-index: 10;
+    .cabin{
+      box-shadow: 5px 5px 5px grey;
+      transition: box-shadow 0.4s ease-in-out;
+    }
+    .cabinTitle{
+      text-shadow: 5px 5px 5px lightgrey;
+      transition: text-shadow 0.4s ease-in-out;
+    }
+  }
+}
+
+
+
 .cabin-img{
-  height: 400px;
-  border: 1px black solid;
   padding: 0;
+  height: 300px;
+  overflow: hidden;
 }
 .amenity{
   display: flex;
@@ -14,4 +70,9 @@
 p {
   margin-bottom: 0;
   padding-left: 10px;
+}
+
+.cabinIllust{
+  padding: 50px 10vw;
+  width: 100%;
 }

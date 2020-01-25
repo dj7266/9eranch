@@ -1,0 +1,29 @@
+@import '../../app.component.scss';
+
+.aboutPage{
+  flex-direction: column;
+}
+
+.aboutHeader{
+  padding-top: 30px;
+  color: $main-color;
+  font-weight: 600;
+}
+
+.address{
+  text-align: center;
+}
+
+
+.aboutPageInfo{
+  align-items: flex-start;
+}
+
+.photo {
+  width: 100%;
+}
+
+agm-map{
+  height: 300px;
+  width: 400px;
+}

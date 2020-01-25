@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 
 
@@ -8,30 +9,41 @@ import { FormControl } from '@angular/forms';
   templateUrl: './banner.component.html',
   styleUrls: ['./banner.component.scss']
 })
+
+// @ViewChild('checkOutDate')
+// checkOutElement!: string;
+
 export class BannerComponent implements OnInit {
   images = [
-    'https://picsum.photos/900/500?random&t=0.919683675527512',
-    'https://picsum.photos/900/500?random&t=0.919683675527513',
-    'https://picsum.photos/900/500?random&t=0.919683675527514',
+    './assets/mainBanner/1.jpg',
+    './assets/mainBanner/2.jpg',
+    './assets/mainBanner/3.jpg'
   ];
   checkInDate = new FormControl(new Date());
   checkOutDate = new FormControl(new Date());
-  checkInMax: Date;
-  checkOutMin: Date;
+  checkInMin = new Date();
+  checkOutMin = new Date();
 
-  constructor() { }
+
+
+  constructor(private _http: HttpClient) { }
 
   ngOnInit() {
+    console.log(this._http.get(`https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=600x300&maptype=roadmap
+      &markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318
+      &markers=color:red%7Clabel:C%7C40.718217,-73.998284
+      &key=AIzaSyAhBtxlvIxjABKVrxXk_itxZrIqbptQcUI`));
   }
 
   reserveWithDate(){
-    console.log(this.checkInDate.value);
-    console.log(this.checkOutDate.value);
+    let startDate = `${this.checkInDate.value.getYear() + 1900}-${this.checkInDate.value.getMonth() + 1}-${this.checkInDate.value.getDate()}`;
+    let endDate = `${this.checkOutDate.value.getYear() + 1900}-${this.checkOutDate.value.getMonth() + 1}-${this.checkOutDate.value.getDate()}`;
+    window.open(`https://via.eviivo.com/ERnchCbnsLstPnsBstrp78957?startdate=${startDate}&enddate=${endDate}&adults1=2&children1=0`);
   }
 
   setCheckOutMin(){
-    this.checkOutMin = this.checkInDate.value;
-    console.log('this is running')
+    this.checkOutMin.setDate(+this.checkInDate.value.getDate() + 1);
+
   }
 
 }
