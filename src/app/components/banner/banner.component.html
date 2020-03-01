@@ -24,6 +24,7 @@
             [matDatepicker]="picker2"
             placeholder="Check Out"
             [(formControl)]="checkOutDate"
+            (dateChange)="checkTwoDayMinimum()"
             [min]="checkOutMin"
 
           />
@@ -33,6 +34,7 @@
           ></mat-datepicker-toggle>
           <mat-datepicker #picker2></mat-datepicker>
         </mat-form-field>
+        <p>{{ error }}</p>
         <div class="container centerAll">
           <button class="datepickerSearch col-sm-4" (click)="reserveWithDate()">Find a Cabin</button>
         </div>

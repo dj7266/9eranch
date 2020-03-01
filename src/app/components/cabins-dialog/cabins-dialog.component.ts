@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
 export interface DialogData {
@@ -14,13 +14,22 @@ export interface DialogData {
   templateUrl: './cabins-dialog.component.html',
   styleUrls: ['./cabins-dialog.component.scss']
 })
-export class CabinsDialogComponent implements OnInit {
+export class CabinsDialogComponent implements OnInit, AfterViewInit {
+  @ViewChild('image', {static: false})
+  images: ElementRef;
 
   constructor(
     public dialogRef: MatDialogRef<CabinsDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: DialogData) { }
 
   ngOnInit() {
+  }
+
+  ngAfterViewInit(){
+    let firstChild = this.images.nativeElement.querySelector('.carousel-item');
+    if (firstChild) {
+      firstChild.classList.add('active');
+    }
   }
 
   onNoClick(): void {

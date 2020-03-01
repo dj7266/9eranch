@@ -5,11 +5,9 @@
   <div class="row centerAll aboutPageInfo col-md-12">
     <div class="centerAllCol col-md-6">
       <h2 class="aboutHeader">Location</h2>
-      <div class="googleMap">
-        <agm-map [latitude]='lat' [longitude]='lng'>
-          <agm-marker [latitude]='lat' [longitude]='lng'></agm-marker>
-        </agm-map>
-      </div>
+      <agm-map [latitude]="lat" [longitude]="lng" [zoom]="9">
+        <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+      </agm-map>
       <p class="address">
         9E Ranch Cabins Lost Pines Bastrop<br />
         2158 Highway 304, Smithville, Texas 78957
@@ -21,10 +19,7 @@
         Joan Bohls: 512-497-9502<br />
         Kent Bohls: 512-663-1005
       </p>
-      <img class="photo" src="./assets/others/Kent_and_Joan.png" alt="">
+      <img class="photo" src="./assets/others/Kent_and_Joan.png" alt="" />
     </div>
   </div>
 </div>
-
-
-

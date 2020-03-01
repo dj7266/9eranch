@@ -109,6 +109,7 @@
     Cabins on Monday, through Thursday nights. Just note Quiet Garden when you
     book.
   </p>
+  <img class='quietGargenImage' *ngFor='let num of listQuietGarden' [src]='getSource("quietGarden", num)' alt="">
   <br><br>
 
   <h2>Joan Bohls' Art</h2>
@@ -119,4 +120,5 @@
   and teaches Plein Air Painting. As you visit the 9E Ranch, please enjoy her
   paintings in the cabins. If you fall in love with any of the paintings, please
   talk to Joan or Kent abour adopting it and taking it home with you.</p>
+  <img class='joanArtImage' *ngFor='let num of listJoanArt' [src]='getSource("joanArt", num)' alt="">
 </div>

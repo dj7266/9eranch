@@ -33,3 +33,16 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .mat-dialog-content{
   max-height: 80vh !important;
 }
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon{
+  width: 40px !important;
+  height: 40px !important;
+}
+
+.carousel-control-next{
+  opacity: 0.8 !important;
+  &:hover{
+    opacity: 1 !important;
+  }
+}
