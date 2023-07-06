@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { faCoffee, faCheckSquare } from '@fortawesome/free-solid-svg-icons';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import {
   MatDialog,
   MatDialogRef,
@@ -11,11 +10,10 @@ import { cabins } from './cabins';
 @Component({
   selector: 'app-cabins',
   templateUrl: './cabins.component.html',
-  styleUrls: ['./cabins.component.scss']
+  styleUrls: ['./cabins.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class CabinsComponent implements OnInit {
-  faCoffee = faCoffee;
-  faCheckSquare = faCheckSquare;
   cabins = cabins;
 
   constructor(public dialog: MatDialog) {}

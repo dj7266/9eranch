@@ -1,23 +1,75 @@
 @import '../../app.component.scss';
 
-
-.cabinDialog, .mat-dialog-content{
+.cabinDialog,
+.mat-dialog-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   color: $main-color;
+  white-space: pre-wrap;
 }
 
-.carousel{
-  margin: 20px 15%;
+.carousel {
+  margin: 20px;
 }
 
-.carousel-item{
-  width: 100%;
+.carousel-item {
+  height: 100%;
   overflow: hidden;
-  img{
-    width: 400px;
+
+  img {
+    height: 400px;
   }
 }
 
+.cabin-dialog-amenities__title,
+.cabin-dialog-about__title {
+  padding-top: 20px;
+}
 
+.amenities {
+  width: 90%;
+  .amenity {
+    display: flex;
+
+    fa-icon {
+      padding-right: 10px;
+      color: green;
+    }
+  }
+  .warning {
+    display: flex;
+
+    fa-icon {
+      padding-right: 10px;
+      color: rgb(251, 248, 90)
+    }
+  }
+}
+.cabin-dialog-about__description{
+  width: 90%;
+}
+
+
+@media screen and (max-width: 600px) {
+
+  .carousel {
+    margin: 0;
+  }
+
+  h3{
+    font-size: 24px;
+  }
+
+  .cabin-dialog-amenities__title,
+  .cabin-dialog-about__title{
+    font-size: 20px;
+  }
+
+  .cabin-dialog-about__description,
+  .cabin-dialog-amenities__description,
+  .cabin-dialog-warning__description{
+    font-size: 16px;
+  }
+
+}

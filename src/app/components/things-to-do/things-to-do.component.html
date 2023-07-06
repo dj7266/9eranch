@@ -1,6 +1,6 @@
 <div class="container">
   <br />
-  <h1>Things To Do</h1>
+  <h1 class="centerAll">Things To Do</h1>
   <br />
 
   <h2>The 9E Ranch</h2>
@@ -11,6 +11,38 @@
     horses and sitting in rocking chairs relaxing. The 9E Ranch Cabins was
     awarded "Best for Stargazing" the first year open.
   </p>
+
+  <br /><br />
+
+  <h2>The Quiet Garden</h2>
+  <p>
+    The 9E Ranch has been a part of the Quiet Garden movement for over a decade
+    providing outdoor space for the inner journey. The Quiet Garden Movement was
+    started in England and now includes over 300 gardens worldwide. The idea is
+    to provide access to outdoor space for prayer and reflection to create
+    opportunities for people to experience silence, restfulness and
+    contemplation. The Quiet Garden Movement flows from the example of Jesus'
+    withdrawal to places to pray and his invitation to "Come with me by
+    yourselves to a quiet place and get some rest " (Mark 6:31) The Gardens at
+    the Ranch House on the 9E Ranch are open from 10:00 until dark for guests
+    and we consider the entire ranch to be a Quiet Garden with many paths. Quiet
+    Garden Retreat reduced rate with 3 night minimum in Daisy and Eagles' Nest
+    Cabins on Monday, through Thursday nights. Just note Quiet Garden when you
+    book.
+  </p>
+  <img class='quietGargenImage' *ngFor='let num of listQuietGarden' [src]='getSource("quietGarden", num)' alt="">
+  <br><br>
+
+  <h2>Joan Bohls' Art</h2>
+  <p>Joan Bohls has been painting in oils for over 2 decades and studied
+  art/painting at The University of Texas as well as taking workshops from many
+  well known artist. She is a member ofOil Painters of America, Outdoor Painter
+  Society and Lost Pines Art CenterLPAC ( she serves on the Board of Directors )
+  and teaches Plein Air Painting. As you visit the 9E Ranch, please enjoy her
+  paintings in the cabins. If you fall in love with any of the paintings, please
+  talk to Joan or Kent abour adopting it and taking it home with you.</p>
+  <img class='joanArtImage' *ngFor='let num of listJoanArt' [src]='getSource("joanArt", num)' alt="">
+
   <br /><br />
 
   <h2>Shoppers will find</h2>
@@ -91,34 +123,5 @@
     Chuck-Will's-Widow, Ruby-Throated Hummigbird, Scissor-Tailed Flycatcher,Pine
     Warbler, Summer Tanager, Painted Bunting, House Finch Blue-Gray Gnatcatcher
   </p>
-  <br /><br />
 
-  <h2>The Quiet Garden</h2>
-  <p>
-    The 9E Ranch has been a part of the Quiet Garden movement for over a decade
-    providing outdoor space for the inner journey. The Quiet Garden Movement was
-    started in England and now includes over 300 gardens worldwide. The idea is
-    to provide access to outdoor space for prayer and reflection to create
-    opportunities for people to experience silence, restfulness and
-    contemplation. The Quiet Garden Movement flows from the example of Jesus'
-    withdrawal to places to pray and his invitation to "Come with me by
-    yourselves to a quiet place and get some rest " (Mark 6:31) The Gardens at
-    the Ranch House on the 9E Ranch are open from 10:00 until dark for guests
-    and we consider the entire ranch to be a Quiet Garden with many paths. Quiet
-    Garden Retreat reduced rate with 3 night minimum in Daisy and Eagles' Nest
-    Cabins on Monday, through Thursday nights. Just note Quiet Garden when you
-    book.
-  </p>
-  <img class='quietGargenImage' *ngFor='let num of listQuietGarden' [src]='getSource("quietGarden", num)' alt="">
-  <br><br>
-
-  <h2>Joan Bohls' Art</h2>
-  <p>Joan Bohls has been painting in oils for over 2 decades and studied
-  art/painting at The University of Texas as well as taking workshops from many
-  well known artist. She is a member ofOil Painters of America, Outdoor Painter
-  Society and Lost Pines Art CenterLPAC ( she serves on the Board of Directors )
-  and teaches Plein Air Painting. As you visit the 9E Ranch, please enjoy her
-  paintings in the cabins. If you fall in love with any of the paintings, please
-  talk to Joan or Kent abour adopting it and taking it home with you.</p>
-  <img class='joanArtImage' *ngFor='let num of listJoanArt' [src]='getSource("joanArt", num)' alt="">
 </div>
